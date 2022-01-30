@@ -110,7 +110,7 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                             cvFlamingoCheck.SetActive (true);
                         } else {
                             cvFlamingoCheck.SetActive (false);
-                            Debug.Log ("tiltA: " + tiltA * 100 + ", tiltB: " + tiltB * 100 + ", tiltC: " + tiltC * 100);
+                            // Debug.Log ("tiltA: " + tiltA * 100 + ", tiltB: " + tiltB * 100 + ", tiltC: " + tiltC * 100);
                         }
 
                         if (!s_JointSet.Add (boneIndex))
