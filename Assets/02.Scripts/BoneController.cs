@@ -8,7 +8,6 @@ namespace UnityEngine.XR.ARFoundation.Samples {
     public class BoneController : MonoBehaviour {
         // added
         public float leftFootX, leftFootY, leftFootZ, rightFootX, rightFootY, rightFootZ = 0;
-        public Vector3 leftFootVector;
 
         // 3D joint skeleton
         enum JointIndices {

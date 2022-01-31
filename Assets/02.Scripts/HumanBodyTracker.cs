@@ -10,10 +10,11 @@ namespace UnityEngine.XR.ARFoundation.Samples {
         [Tooltip ("The Skeleton prefab to be controlled.")]
         GameObject m_SkeletonPrefab;
 
-        // added
-        public GameObject flamingPrefab, cvFoot;
-        [SerializeField] private GameObject jointPrefab;
-        //
+        // added ---------------
+        public GameObject cvFoot;
+        public bool foundPerson = false; // bool to send to CanvasHolder
+
+        // ---------------------
 
         [SerializeField]
         [Tooltip ("The ARHumanBodyManager which will produce body tracking events.")]
@@ -37,9 +38,6 @@ namespace UnityEngine.XR.ARFoundation.Samples {
 
         Dictionary<TrackableId, BoneController> m_SkeletonTracker = new Dictionary<TrackableId, BoneController> ();
 
-        // added
-        private Dictionary<JointIndices3D, Transform> bodyJoints;
-        //
 
         void OnEnable () {
             Debug.Assert (m_HumanBodyManager != null, "Human body manager is required.");
@@ -53,6 +51,8 @@ namespace UnityEngine.XR.ARFoundation.Samples {
 
         void OnHumanBodiesChanged (ARHumanBodiesChangedEventArgs eventArgs) {
             BoneController boneController;
+
+            foundPerson = true;
 
             foreach (var humanBody in eventArgs.added) {
                 if (!m_SkeletonTracker.TryGetValue (humanBody.trackableId, out boneController)) {
@@ -70,6 +70,7 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                 boneController.ApplyBodyPose (humanBody);
 
                 // added
+                // foundPerson = true;
                 // check either leftfoot or right foot is on the bottom
                 var footCenterX = (boneController.leftFootX + boneController.rightFootX) / 2;
                 if (boneController.rightFootY > boneController.leftFootY)
@@ -102,46 +103,5 @@ namespace UnityEngine.XR.ARFoundation.Samples {
             }
 
         }
-
-        //added
-        // private void UpdateJointTransform (Transform jointT, XRHumanBodyJoint bodyJoint) {
-        //     jointT.localPosition = bodyJoint.anchorPose.position;
-        //     jointT.localRotation = bodyJoint.anchorPose.rotation;
-        //     jointT.localScale = bodyJoint.anchorScale;
-        // }
-        // private void InitialiseObjects (Transform arBodyT) {
-        //     if (bodyJoints == null) {
-        //         bodyJoints = new Dictionary<JointIndices3D, Transform> { { JointIndices3D.Head, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.Neck1, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.LeftArm, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.RightArm, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.LeftForearm, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.RightForearm, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.LeftHand, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.RightHand, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.LeftUpLeg, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.RightUpLeg, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.LeftLeg, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.RightLeg, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.LeftFoot, GetNewJointPrefab (arBodyT) },
-        //         { JointIndices3D.RightFoot, GetNewJointPrefab (arBodyT) }
-        //         };
-        //     }
-        // }
-
-        // private Transform GetNewJointPrefab (Transform arBodyT) {
-        //     return Instantiate (jointPrefab, arBodyT).transform;
-        // }
-
-        // void UpdateBody (ARHumanBody arBody) {
-        //     Transform arBodyT = arBody.transform;
-
-        //     if (arBodyT == null) {
-        //         Debug.Log ("No root transform found for ARHumanBody");
-        //         return;
-        //     }
-
-        //     InitialiseObjects (arBodyT);
-        // }
     }
 }

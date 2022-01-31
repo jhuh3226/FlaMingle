@@ -11,6 +11,7 @@ namespace UnityEngine.XR.ARFoundation.Samples {
         // added
         public GameObject UpRightSphere, RightSphere, RightFootSphere, cvFlamingoCheck;
         float tiltA, tiltB, tiltC = 0;
+        public bool flamingoPose = false;       // bool passed to CanvasHolder
 
         // 2D joint skeleton
         enum JointIndices {
@@ -106,9 +107,11 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                         tiltC = (joints[8].position.y - joints[10].position.y) / (joints[8].position.x - joints[10].position.x);
 
                         if ((tiltA * 100 > 15 && tiltA * 100 < 45) && (tiltB * 100 > -25 && tiltB * 100 < 0)) {
+                            flamingoPose = true;
                             // Debug.Log ("flamingo posture");
                             cvFlamingoCheck.SetActive (true);
                         } else {
+                            flamingoPose = false;
                             cvFlamingoCheck.SetActive (false);
                             // Debug.Log ("tiltA: " + tiltA * 100 + ", tiltB: " + tiltB * 100 + ", tiltC: " + tiltC * 100);
                         }
