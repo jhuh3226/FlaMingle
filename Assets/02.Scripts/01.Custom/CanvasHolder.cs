@@ -9,9 +9,9 @@ using UnityEngine.XR.ARSubsystems;
 
 public class CanvasHolder : MonoBehaviour {
     public Canvas cvPointPerson, cvFootGuide, cvFootText, cvPoseGuide, cvMessage;
-    public GameObject HumanBodyTracker, ArCamera, Flamingo;
+    public GameObject HumanBodyTracker, ArCamera, ArSessionOrigin; // the flamingo here is spawned packs of flamingo
 
-    bool pointGuideInitiated, footGuideInitiated, poseGuideInitiated, flamingoCombackInitiated = false;
+    public bool pointGuideInitiated, footGuideInitiated, poseGuideInitiated, flamingoCombackInitiated = false;
 
     Animator m_Animator;
     public RuntimeAnimatorController FlamingoTest, FlamingoComeback;
@@ -23,14 +23,10 @@ public class CanvasHolder : MonoBehaviour {
         cvFootText.enabled = false;
         cvPoseGuide.enabled = false;
         cvMessage.enabled = false;
-
-        m_Animator = Flamingo.GetComponent<Animator> ();
     }
 
     // Update is called once per frame
     void FixedUpdate () {
-        Debug.Log (ArCamera.GetComponent<ScreenSpaceJointVisualizer> ().flamingoPose);
-
         /* 01. cv saying, point toward person */
 
         /* 02. get the position of the person's foot and enable the guide cv(world-view) and cv text(overlay) */
@@ -48,14 +44,14 @@ public class CanvasHolder : MonoBehaviour {
             cvFootGuide.enabled = false;
             cvFootText.enabled = false;
             footGuideInitiated = !footGuideInitiated;
-
-            AnimateFlamingoFlea (); // play flamingo flea animation
+            // AnimateFlamingoFlea (); // play flamingo flea animation
 
             // hide raycast manger and stop people to create multiple packs of flamingos
         }
 
         /* 04. When the animation finishes, enable cv guiding people with to make flamingo posture (mingle and get part of it) */
-        else if (m_Animator.GetCurrentAnimatorStateInfo (0).normalizedTime >= 1.0f && !poseGuideInitiated) {
+        /* get the animation finish information from ARTapToPlaceObject */
+        else if (ArSessionOrigin.GetComponent<ARTapToPlaceObject> ().firstAnimationDone && !poseGuideInitiated) {
             Debug.Log ("AnimationFinished");
             ControlPoseGuide ();
             poseGuideInitiated = !poseGuideInitiated;
@@ -65,12 +61,11 @@ public class CanvasHolder : MonoBehaviour {
         /* *what if posture is incorrect?*/
         else if (ArCamera.GetComponent<ScreenSpaceJointVisualizer> ().flamingoPose && cvPoseGuide.enabled) {
             Debug.Log ("The pose is correct");
-            AnimateFlamingoComback ();
             flamingoCombackInitiated = true;
         }
 
         /* 06. When all flamingos come near, final message pops up*/
-        else if (m_Animator.GetCurrentAnimatorStateInfo (0).normalizedTime >= 1.0f && flamingoCombackInitiated) {
+        else if (ArSessionOrigin.GetComponent<ARTapToPlaceObject> ().secondAnimationDone && flamingoCombackInitiated) {
             ControlMessage ();
         }
 
@@ -93,11 +88,12 @@ public class CanvasHolder : MonoBehaviour {
         cvMessage.enabled = true;
     }
 
-    void AnimateFlamingoFlea () {
-        Flamingo.GetComponent<Animator> ().runtimeAnimatorController = FlamingoTest as RuntimeAnimatorController;
-    }
-
-    void AnimateFlamingoComback () {
-        Flamingo.GetComponent<Animator> ().runtimeAnimatorController = FlamingoComeback as RuntimeAnimatorController;
+    void FindFlamingo () {
+        // FlamingoPack = (GameObject) Instantiate (FlamingoPackPrefab);
+        // FlamingoPack = GameObject.FindWithTag ("ArSessionOrigin").GetComponent<ARTapToPlaceObject> ().spawnedObject;
+        // Invoke ("FindSingleFlamingo", 2);
+        // SingleFlamingo = FlamingoPack.transform.GetChild (0).gameObject;
+        // Debug.Log ($"Name: {SingleFlamingo}");
+        // m_Animator = SingleFlamingo.GetComponent<Animator> ();
     }
 }
