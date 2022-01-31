@@ -1,16 +1,17 @@
-﻿using UnityEngine.XR.ARFoundation;
-using UnityEngine;
-using UnityEngine.XR.ARSubsystems;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
-namespace UnityEngine.XR.ARFoundation.Samples
-{
-    public class BoneController : MonoBehaviour
-    {
+namespace UnityEngine.XR.ARFoundation.Samples {
+    public class BoneController : MonoBehaviour {
+        // added
+        public float leftFootX, leftFootY, leftFootZ, rightFootX, rightFootY, rightFootZ = 0;
+        public Vector3 leftFootVector;
+
         // 3D joint skeleton
-        enum JointIndices
-        {
+        enum JointIndices {
             Invalid = -1,
             Root = 0, // parent: <none> [-1]
             Hips = 1, // parent: Root [0]
@@ -107,84 +108,88 @@ namespace UnityEngine.XR.ARFoundation.Samples
         const int k_NumSkeletonJoints = 91;
 
         [SerializeField]
-        [Tooltip("The root bone of the skeleton.")]
+        [Tooltip ("The root bone of the skeleton.")]
         Transform m_SkeletonRoot;
 
         /// <summary>
         /// Get/Set the root bone of the skeleton.
         /// </summary>
-        public Transform skeletonRoot
-        {
-            get
-            {
+        public Transform skeletonRoot {
+            get {
                 return m_SkeletonRoot;
             }
-            set
-            {
+            set {
                 m_SkeletonRoot = value;
             }
         }
 
         Transform[] m_BoneMapping = new Transform[k_NumSkeletonJoints];
 
-        public void InitializeSkeletonJoints()
-        {
+        public void InitializeSkeletonJoints () {
             // Walk through all the child joints in the skeleton and
             // store the skeleton joints at the corresponding index in the m_BoneMapping array.
             // This assumes that the bones in the skeleton are named as per the
             // JointIndices enum above.
-            Queue<Transform> nodes = new Queue<Transform>();
-            nodes.Enqueue(m_SkeletonRoot);
-            while (nodes.Count > 0)
-            {
-                Transform next = nodes.Dequeue();
-                for (int i = 0; i < next.childCount; ++i)
-                {
-                    nodes.Enqueue(next.GetChild(i));
+            Queue<Transform> nodes = new Queue<Transform> ();
+            nodes.Enqueue (m_SkeletonRoot);
+            while (nodes.Count > 0) {
+                Transform next = nodes.Dequeue ();
+                for (int i = 0; i < next.childCount; ++i) {
+                    nodes.Enqueue (next.GetChild (i));
                 }
-                ProcessJoint(next);
+                ProcessJoint (next);
             }
         }
 
-        public void ApplyBodyPose(ARHumanBody body)
-        {
+        public void ApplyBodyPose (ARHumanBody body) {
             var joints = body.joints;
             if (!joints.IsCreated)
                 return;
 
-            for (int i = 0; i < k_NumSkeletonJoints; ++i)
-            {
+            for (int i = 0; i < k_NumSkeletonJoints; ++i) {
                 XRHumanBodyJoint joint = joints[i];
                 var bone = m_BoneMapping[i];
-                if (bone != null)
-                {
+                if (bone != null) {
                     bone.transform.localPosition = joint.localPose.position;
                     bone.transform.localRotation = joint.localPose.rotation;
                 }
             }
+
+            // added ----------------------
+            // left toes
+            var bone5 = m_BoneMapping[5];
+            if (bone5 != null) {
+                leftFootX = m_BoneMapping[5].position.x;
+                leftFootY = m_BoneMapping[5].position.y;
+                leftFootZ = m_BoneMapping[5].position.z;
+                // Debug.Log ($"Left foot x: {leftFootX}, y: {leftFootY}, z: {leftFootZ}");
+            }
+
+            // right toes
+            var bone10 = m_BoneMapping[10];
+            if (bone10 != null) {
+                rightFootX = m_BoneMapping[10].position.x;
+                rightFootY = m_BoneMapping[10].position.y;
+                rightFootZ = m_BoneMapping[10].position.z;
+            }
+            // -----------------------------
         }
 
-        void ProcessJoint(Transform joint)
-        {
-            int index = GetJointIndex(joint.name);
-            if (index >= 0 && index < k_NumSkeletonJoints)
-            {
+        void ProcessJoint (Transform joint) {
+            int index = GetJointIndex (joint.name);
+            if (index >= 0 && index < k_NumSkeletonJoints) {
                 m_BoneMapping[index] = joint;
-            }
-            else
-            {
-                Debug.LogWarning($"{joint.name} was not found.");
+            } else {
+                Debug.LogWarning ($"{joint.name} was not found.");
             }
         }
 
         // Returns the integer value corresponding to the JointIndices enum value
         // passed in as a string.
-        int GetJointIndex(string jointName)
-        {
+        int GetJointIndex (string jointName) {
             JointIndices val;
-            if (Enum.TryParse(jointName, out val))
-            {
-                return (int)val;
+            if (Enum.TryParse (jointName, out val)) {
+                return (int) val;
             }
             return -1;
         }

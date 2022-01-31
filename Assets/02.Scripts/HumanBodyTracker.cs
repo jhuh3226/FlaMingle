@@ -9,7 +9,11 @@ namespace UnityEngine.XR.ARFoundation.Samples {
         [SerializeField]
         [Tooltip ("The Skeleton prefab to be controlled.")]
         GameObject m_SkeletonPrefab;
-        public GameObject flamingPrefab;
+
+        // added
+        public GameObject flamingPrefab, cvFoot;
+        [SerializeField] private GameObject jointPrefab;
+        //
 
         [SerializeField]
         [Tooltip ("The ARHumanBodyManager which will produce body tracking events.")]
@@ -32,6 +36,10 @@ namespace UnityEngine.XR.ARFoundation.Samples {
         }
 
         Dictionary<TrackableId, BoneController> m_SkeletonTracker = new Dictionary<TrackableId, BoneController> ();
+
+        // added
+        private Dictionary<JointIndices3D, Transform> bodyJoints;
+        //
 
         void OnEnable () {
             Debug.Assert (m_HumanBodyManager != null, "Human body manager is required.");
@@ -60,11 +68,28 @@ namespace UnityEngine.XR.ARFoundation.Samples {
 
                 boneController.InitializeSkeletonJoints ();
                 boneController.ApplyBodyPose (humanBody);
+
+                // added
+                // check either leftfoot or right foot is on the bottom
+                var footCenterX = (boneController.leftFootX + boneController.rightFootX) / 2;
+                if (boneController.rightFootY > boneController.leftFootY)
+                    cvFoot.transform.position = new Vector3 (footCenterX, boneController.leftFootY, boneController.leftFootZ);
+                else
+                    cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
+
+                // Debug.Log (boneController.leftFootX);
             }
 
             foreach (var humanBody in eventArgs.updated) {
                 if (m_SkeletonTracker.TryGetValue (humanBody.trackableId, out boneController)) {
                     boneController.ApplyBodyPose (humanBody);
+
+                    // added
+                    var footCenterX = (boneController.leftFootX + boneController.rightFootX) / 2;
+                    if (boneController.rightFootY > boneController.leftFootY)
+                        cvFoot.transform.position = new Vector3 (footCenterX, boneController.leftFootY, boneController.leftFootZ);
+                    else
+                        cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
                 }
             }
 
@@ -75,6 +100,48 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                     m_SkeletonTracker.Remove (humanBody.trackableId);
                 }
             }
+
         }
+
+        //added
+        // private void UpdateJointTransform (Transform jointT, XRHumanBodyJoint bodyJoint) {
+        //     jointT.localPosition = bodyJoint.anchorPose.position;
+        //     jointT.localRotation = bodyJoint.anchorPose.rotation;
+        //     jointT.localScale = bodyJoint.anchorScale;
+        // }
+        // private void InitialiseObjects (Transform arBodyT) {
+        //     if (bodyJoints == null) {
+        //         bodyJoints = new Dictionary<JointIndices3D, Transform> { { JointIndices3D.Head, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.Neck1, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.LeftArm, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.RightArm, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.LeftForearm, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.RightForearm, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.LeftHand, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.RightHand, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.LeftUpLeg, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.RightUpLeg, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.LeftLeg, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.RightLeg, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.LeftFoot, GetNewJointPrefab (arBodyT) },
+        //         { JointIndices3D.RightFoot, GetNewJointPrefab (arBodyT) }
+        //         };
+        //     }
+        // }
+
+        // private Transform GetNewJointPrefab (Transform arBodyT) {
+        //     return Instantiate (jointPrefab, arBodyT).transform;
+        // }
+
+        // void UpdateBody (ARHumanBody arBody) {
+        //     Transform arBodyT = arBody.transform;
+
+        //     if (arBodyT == null) {
+        //         Debug.Log ("No root transform found for ARHumanBody");
+        //         return;
+        //     }
+
+        //     InitialiseObjects (arBodyT);
+        // }
     }
 }

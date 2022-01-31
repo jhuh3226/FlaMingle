@@ -1004,4 +1004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SkeletonPrefab: {fileID: 6790265602204177959, guid: d93d5415c51fa49aba66e61ec7b78b34,
     type: 3}
+  flamingPrefab: {fileID: 4157571319811477036, guid: e37c060ec8d694db0a97c26888c2318a,
+    type: 3}
   m_HumanBodyManager: {fileID: 1335839536}
