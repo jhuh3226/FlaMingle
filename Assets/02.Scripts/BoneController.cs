@@ -7,7 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 namespace UnityEngine.XR.ARFoundation.Samples {
     public class BoneController : MonoBehaviour {
         // added
-        public float leftFootX, leftFootY, leftFootZ, rightFootX, rightFootY, rightFootZ = 0;
+        public float leftFootX, leftFootY, leftFootZ, rightFootX, rightFootY, rightFootZ, hipX, hipY, hipZ = 0;
 
         // 3D joint skeleton
         enum JointIndices {
@@ -170,6 +170,14 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                 rightFootX = m_BoneMapping[10].position.x;
                 rightFootY = m_BoneMapping[10].position.y;
                 rightFootZ = m_BoneMapping[10].position.z;
+            }
+
+            // hips
+            var bone1 = m_BoneMapping[1];
+            if (bone1 != null) {
+                hipX = m_BoneMapping[1].position.x;
+                hipY = m_BoneMapping[1].position.y;
+                hipZ = m_BoneMapping[1].position.z;
             }
             // -----------------------------
         }

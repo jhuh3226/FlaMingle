@@ -11,7 +11,7 @@ namespace UnityEngine.XR.ARFoundation.Samples {
         GameObject m_SkeletonPrefab;
 
         // added ---------------
-        public GameObject cvFoot;
+        public GameObject cvFoot, colliderSphere;
         public bool foundPerson = false; // bool to send to CanvasHolder
 
         // ---------------------
@@ -37,7 +37,6 @@ namespace UnityEngine.XR.ARFoundation.Samples {
         }
 
         Dictionary<TrackableId, BoneController> m_SkeletonTracker = new Dictionary<TrackableId, BoneController> ();
-
 
         void OnEnable () {
             Debug.Assert (m_HumanBodyManager != null, "Human body manager is required.");
@@ -73,10 +72,9 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                 // foundPerson = true;
                 // check either leftfoot or right foot is on the bottom
                 var footCenterX = (boneController.leftFootX + boneController.rightFootX) / 2;
-                if (boneController.rightFootY > boneController.leftFootY)
-                    cvFoot.transform.position = new Vector3 (footCenterX, boneController.leftFootY, boneController.leftFootZ);
-                else
-                    cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
+                if (boneController.rightFootY > boneController.leftFootY) cvFoot.transform.position = new Vector3 (footCenterX, boneController.leftFootY, boneController.leftFootZ);
+                else cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
+                colliderSphere.transform.position = new Vector3 (boneController.hipX, boneController.hipY, boneController.hipZ); // hip position
 
                 // Debug.Log (boneController.leftFootX);
             }
@@ -87,10 +85,9 @@ namespace UnityEngine.XR.ARFoundation.Samples {
 
                     // added
                     var footCenterX = (boneController.leftFootX + boneController.rightFootX) / 2;
-                    if (boneController.rightFootY > boneController.leftFootY)
-                        cvFoot.transform.position = new Vector3 (footCenterX, boneController.leftFootY, boneController.leftFootZ);
-                    else
-                        cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
+                    if (boneController.rightFootY > boneController.leftFootY) cvFoot.transform.position = new Vector3 (footCenterX, boneController.leftFootY, boneController.leftFootZ);
+                    else cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
+                    colliderSphere.transform.position = new Vector3 (boneController.hipX, boneController.hipY, boneController.hipZ); // hip position
                 }
             }
 

@@ -17,12 +17,13 @@ public class ARTapToPlaceObject : MonoBehaviour {
     static List<ARRaycastHit> hits = new List<ARRaycastHit> (); // reference of raycast
 
     // Animation controll
-    Animator m_Animator;
+    List<Animator> m_Animator; // has to be list
     public RuntimeAnimatorController FlamingoComeback;
     public bool firstAnimationDone, secondAnimationDone = false;
 
     private void Awake () {
         _arRaycastManager = GetComponent<ARRaycastManager> ();
+        // m_Animator = new List<Animator> ();
     }
 
     bool TryGetTouchPosition (out Vector2 touchPosition) {
@@ -41,7 +42,7 @@ public class ARTapToPlaceObject : MonoBehaviour {
     void Update () {
         if (m_Animator != null) CheckFirstAnimation (); // animation passing to canvas holder
         if (eventSystem.GetComponent<CanvasHolder> ().flamingoCombackInitiated) {
-            Invoke("CheckSecondAnimation", 2f);
+            Invoke ("CheckSecondAnimation", 2f);
             AnimateFlamingoComeback ();
         }
 
@@ -56,11 +57,21 @@ public class ARTapToPlaceObject : MonoBehaviour {
 
                 foreach (Transform child in spawnedObject.transform) {
                     singleFlamingos[i] = child.gameObject;
-                    // Debug.Log (singleFlamingos[i]);
+                    Debug.Log (singleFlamingos[i]);
                     i += 1;
                 }
                 // singleFlamingo = spawnedObject.transform.GetChild (0).gameObject; // get the firstchild objects of the flamingo packs
-                m_Animator = singleFlamingos[0].GetComponent<Animator> ();
+
+                // if there are singleflaminogs, put each animator to list
+                if (singleFlamingos != null) {
+                    m_Animator = new List<Animator> (); // initiate new list
+
+                    for (int i = 0; i < singleFlamingos.Length; i++) {
+                        Debug.Log (singleFlamingos.Length);
+                        m_Animator.Add (singleFlamingos[i].GetComponent<Animator> ());
+                        Debug.Log ("anim: " + m_Animator[i]);
+                    }
+                }
 
             } else {
                 spawnedObject.transform.position = hitPose.position;
@@ -69,21 +80,30 @@ public class ARTapToPlaceObject : MonoBehaviour {
     }
 
     void CheckFirstAnimation () {
-        if (m_Animator.GetCurrentAnimatorStateInfo (0).normalizedTime >= 4.5f) {
+        if (m_Animator[0].GetCurrentAnimatorStateInfo (0).normalizedTime >= 4f) {
             Debug.Log ("1st animation done");
-            firstAnimationDone = true;
+            firstAnimationDone = true; // pass the bool to canvasHolder
+
+            // stop all flamingos running
+            foreach (Animator anim in m_Animator) {
+                anim.SetBool ("IsStopRunning", true);
+            }
         }
     }
 
     void CheckSecondAnimation () {
-        if (m_Animator.GetCurrentAnimatorStateInfo (0).normalizedTime >= 1.0f) {
+        if (m_Animator[0].GetCurrentAnimatorStateInfo (0).normalizedTime >= 1.0f) {
             Debug.Log ("2nd animation done");
             secondAnimationDone = true;
         }
     }
 
+    // For comeback action it can go either 1) comback to where the cube is
+    // or 2) comback near wear the person is
+    // for the 1st case, stop make them running and sit or do other motion when it collides with collider around human
+    // for the 2nd case, animation + postion movement should be considered well
     void AnimateFlamingoComeback () {
-        foreach (GameObject single in singleFlamingos) single.GetComponent<Animator> ().runtimeAnimatorController = FlamingoComeback as RuntimeAnimatorController;
+        // foreach (GameObject single in singleFlamingos) single.GetComponent<Animator> ().runtimeAnimatorController = FlamingoComeback as RuntimeAnimatorController;
         Debug.Log ("Flamingos going near the person");
     }
 }
