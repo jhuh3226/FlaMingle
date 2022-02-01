@@ -1,0 +1,2592 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8236433054435667968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634208}
+  m_Layer: 0
+  m_Name: flamingo_Hip_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667968}
+  m_LocalRotation: {x: 0.68220896, y: 0.1859869, z: 0.6822087, w: 0.1859869}
+  m_LocalPosition: {x: -0.00000001039237, y: 0.8264582, z: -0.23774967}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634226}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0.000005745184, y: 90.00001, z: 149.5007}
+--- !u!1 &8236433054435667970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634210}
+  m_Layer: 0
+  m_Name: flamingo_Head_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667970}
+  m_LocalRotation: {x: 0.0000010164105, y: -0.00000056989927, z: 0.48009795, w: 0.8772149}
+  m_LocalPosition: {x: -0.037399597, y: -0.00000015258789, z: 0.00000015258789}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634290}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.00013446432, y: 0.0000034396292, z: 59.058475}
+--- !u!1 &8236433054435667972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634212}
+  m_Layer: 0
+  m_Name: flamingo_l_ball_IKGoal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667972}
+  m_LocalRotation: {x: 0.5004627, y: 0.49951988, z: 0.5004627, w: -0.49955398}
+  m_LocalPosition: {x: -0, y: 0, z: -0.0000000047683715}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634194}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -89.899124, y: -89.996086, z: 0}
+--- !u!1 &8236433054435667974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634214}
+  m_Layer: 0
+  m_Name: flamingo_l_Ankle_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667974}
+  m_LocalRotation: {x: 0.15324104, y: -0.031450406, z: -0.025081886, w: 0.9873697}
+  m_LocalPosition: {x: -0.3193123, y: 0, z: 0.0000000047683715}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 0.9999999}
+  m_Children:
+  - {fileID: 8236433054435634202}
+  m_Father: {fileID: 8236433054435634192}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 16.770721, y: -6.634028, z: -9.134896}
+--- !u!1 &8236433054435667976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634216}
+  - component: {fileID: 8236433054434831378}
+  - component: {fileID: 8236433054433734354}
+  m_Layer: 0
+  m_Name: flamingo_l_Foot_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667976}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.071143866, y: -0.064648055, z: 0.40235075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634222}
+  m_Father: {fileID: 8236433054435634176}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8236433054434831378
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667976}
+  m_Mesh: {fileID: 4300006, guid: be272830d190afb4397662bd6dbcbe45, type: 3}
+--- !u!23 &8236433054433734354
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667976}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a73da93fd0803c544a856f66cf707a93, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8236433054435667978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634218}
+  m_Layer: 0
+  m_Name: flamingo_l_ball_IKGoal 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667978}
+  m_LocalRotation: {x: 0.50668794, y: -0.4932224, z: 0.50668794, w: 0.49322042}
+  m_LocalPosition: {x: -0, y: 0, z: 0.0000000333786}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634250}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 88.456924, y: 90.00415, z: -179.99574}
+--- !u!1 &8236433054435667980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634220}
+  m_Layer: 0
+  m_Name: flamingo_l_heel_IKGoal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667980}
+  m_LocalRotation: {x: 0.5004627, y: 0.49951988, z: 0.5004627, w: -0.49955398}
+  m_LocalPosition: {x: 0.033632524, y: 0.4037885, z: 0.0000020170212}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634194}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -89.899124, y: -89.996086, z: 0}
+--- !u!1 &8236433054435667982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634222}
+  m_Layer: 0
+  m_Name: flamingo_l_Heel_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667982}
+  m_LocalRotation: {x: 0.44239125, y: 0.5516244, z: 0.44241837, w: 0.55160356}
+  m_LocalPosition: {x: -0, y: 0.022527007, z: -0.41325223}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634204}
+  m_Father: {fileID: 8236433054435634216}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0027687352, y: 89.99995, z: 90.060616}
+--- !u!1 &8236433054435667984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634224}
+  m_Layer: 0
+  m_Name: flamingo_Beak-nub_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667984}
+  m_LocalRotation: {x: 0.000000060505954, y: -1.1806175e-12, z: -0.00000025331974,
+    w: 1}
+  m_LocalPosition: {x: -0.052627258, y: 0, z: -2.910383e-13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.000007775976, y: -4.0526518e-10, z: -0.000025017302}
+--- !u!1 &8236433054435667986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634226}
+  - component: {fileID: 8236433054428365778}
+  m_Layer: 0
+  m_Name: FlamingoIdle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634234}
+  - {fileID: 8236433054435634238}
+  - {fileID: 8236433054435634208}
+  - {fileID: 8236433054435634176}
+  - {fileID: 8236433054435634622}
+  - {fileID: 8236433054435634620}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8236433054428365778
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667986}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: be272830d190afb4397662bd6dbcbe45, type: 3}
+  m_Controller: {fileID: 9100000, guid: 8f599db30743c4a8ab63ef856837b210, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &8236433054435667988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634228}
+  m_Layer: 0
+  m_Name: flamingo_Beak_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667988}
+  m_LocalRotation: {x: 0.0000009929221, y: 0.0000016287802, z: 0.143619, w: 0.9896331}
+  m_LocalPosition: {x: -0.07093729, y: 0, z: -0.00000015258847}
+  m_LocalScale: {x: 0.999999, y: 0.99999934, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634182}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.0000861597, y: 0.00020167917, z: 16.514637}
+--- !u!1 &8236433054435667990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634230}
+  m_Layer: 0
+  m_Name: flamingo_Beak_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667990}
+  m_LocalRotation: {x: 0.0000009186551, y: 0.0000016217749, z: 0.14361899, w: 0.9896331}
+  m_LocalPosition: {x: -0.07093727, y: 0, z: -0.00000015258672}
+  m_LocalScale: {x: 0.9999999, y: 0.9999998, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634224}
+  m_Father: {fileID: 8236433054435634182}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00008413953, y: 0.0001928537, z: 16.514637}
+--- !u!1 &8236433054435667992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634232}
+  m_Layer: 0
+  m_Name: flamingo_COM_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667992}
+  m_LocalRotation: {x: 0.50611264, y: -0, z: -0, w: 0.8624674}
+  m_LocalPosition: {x: -0.00000001039237, y: 0.23774967, z: 0.8264582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634268}
+  m_Father: {fileID: 8236433054435634176}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 60.810474, y: 0, z: 0}
+--- !u!1 &8236433054435667994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634234}
+  - component: {fileID: 8236433054424169746}
+  m_Layer: 0
+  m_Name: flamingo_Body_mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667994}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634226}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &8236433054424169746
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667994}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 97e3f952d167a434ca1f5d5bce26f140, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: be272830d190afb4397662bd6dbcbe45, type: 3}
+  m_Bones:
+  - {fileID: 8236433054435634236}
+  - {fileID: 8236433054435634264}
+  - {fileID: 8236433054435634230}
+  - {fileID: 8236433054435634182}
+  - {fileID: 8236433054435634290}
+  - {fileID: 8236433054435634190}
+  - {fileID: 8236433054435634186}
+  - {fileID: 8236433054435634256}
+  - {fileID: 8236433054435634284}
+  - {fileID: 8236433054435634280}
+  - {fileID: 8236433054435634276}
+  - {fileID: 8236433054435634272}
+  - {fileID: 8236433054435634300}
+  - {fileID: 8236433054435634296}
+  - {fileID: 8236433054435634292}
+  - {fileID: 8236433054435634294}
+  - {fileID: 8236433054435634616}
+  - {fileID: 8236433054435634618}
+  - {fileID: 8236433054435634254}
+  - {fileID: 8236433054435634248}
+  - {fileID: 8236433054435634612}
+  - {fileID: 8236433054435634198}
+  - {fileID: 8236433054435634268}
+  - {fileID: 8236433054435634592}
+  - {fileID: 8236433054435634242}
+  - {fileID: 8236433054435634610}
+  - {fileID: 8236433054435634214}
+  - {fileID: 8236433054435634192}
+  - {fileID: 8236433054435634202}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 8236433054435634268}
+  m_AABB:
+    m_Center: {x: 0.15326494, y: 0.29836664, z: 0.008264154}
+    m_Extent: {x: 0.62131804, y: 0.6448096, z: 0.20959389}
+  m_DirtyAABB: 0
+--- !u!1 &8236433054435667996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634236}
+  m_Layer: 0
+  m_Name: flamingo_Head_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667996}
+  m_LocalRotation: {x: 0.0000009936227, y: -0.0000005399014, z: 0.4800979, w: 0.87721497}
+  m_LocalPosition: {x: -0.03739975, y: 0.000000076293944, z: 0.000000007214257}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 8236433054435634182}
+  - {fileID: 8236433054435634180}
+  - {fileID: 8236433054435634264}
+  - {fileID: 8236433054435634270}
+  m_Father: {fileID: 8236433054435634290}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00012607445, y: -0.00000017889079, z: 59.058468}
+--- !u!1 &8236433054435667998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634238}
+  - component: {fileID: 8236433054424169744}
+  m_Layer: 0
+  m_Name: flamingo_Feathers_mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667998}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634226}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &8236433054424169744
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435667998}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fd7f93436b1ee844fac4c80d8dcfc2e7, type: 2}
+  - {fileID: 2100000, guid: 0335b02cd2bcc904c94a440c92a47e61, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300002, guid: be272830d190afb4397662bd6dbcbe45, type: 3}
+  m_Bones:
+  - {fileID: 8236433054435634618}
+  - {fileID: 8236433054435634612}
+  - {fileID: 8236433054435634268}
+  - {fileID: 8236433054435634254}
+  - {fileID: 8236433054435634592}
+  - {fileID: 8236433054435634198}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 8236433054435634268}
+  m_AABB:
+    m_Center: {x: -0.10118141, y: 0.05388128, z: -0.0020330995}
+    m_Extent: {x: 0.26848286, y: 0.17513606, z: 0.19594319}
+  m_DirtyAABB: 0
+--- !u!1 &8236433054435668032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634272}
+  m_Layer: 0
+  m_Name: flamingo_Neck5_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668032}
+  m_LocalRotation: {x: 0.0000005295474, y: 0.00000028466795, z: -0.04191319, w: 0.99912125}
+  m_LocalPosition: {x: -0.06398155, y: 0, z: 0.000000012905548}
+  m_LocalScale: {x: 0.9999997, y: 0.9999997, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634276}
+  - {fileID: 8236433054435634282}
+  m_Father: {fileID: 8236433054435634300}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.42330518, y: -0.039901685, z: -5.421718}
+--- !u!1 &8236433054435668034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634274}
+  m_Layer: 0
+  m_Name: flamingo_Neck4_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668034}
+  m_LocalRotation: {x: 0.00000005441838, y: 0.000000071207516, z: -0.1311642, w: 0.99136066}
+  m_LocalPosition: {x: -0.0536837, y: -0.0000000667572, z: -0.000000076293944}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634296}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.030266047, y: -0.008627057, z: -15.679866}
+--- !u!1 &8236433054435668036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634276}
+  m_Layer: 0
+  m_Name: flamingo_Neck6_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668036}
+  m_LocalRotation: {x: 0.0000012494341, y: 0.00000031659482, z: -0.019173205, w: 0.9998162}
+  m_LocalPosition: {x: -0.06801498, y: -0.00000015258789, z: -0.0000000142574565}
+  m_LocalScale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
+  m_Children:
+  - {fileID: 8236433054435634280}
+  - {fileID: 8236433054435634286}
+  m_Father: {fileID: 8236433054435634272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.42216077, y: -0.019387158, z: -2.820008}
+--- !u!1 &8236433054435668038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634278}
+  m_Layer: 0
+  m_Name: flamingo_Neck5_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668038}
+  m_LocalRotation: {x: 0.0000004930688, y: 0.0000003039088, z: -0.041913193, w: 0.99912125}
+  m_LocalPosition: {x: -0.063981324, y: 0.000000076293944, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634300}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.4233093, y: -0.039897658, z: -5.4217134}
+--- !u!1 &8236433054435668040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634280}
+  m_Layer: 0
+  m_Name: flamingo_Neck7_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668040}
+  m_LocalRotation: {x: 0.000002043863, y: 0.00000027184575, z: -0.0068906248, w: 0.9999763}
+  m_LocalPosition: {x: -0.07776192, y: -0.000000038146972, z: 0.00000010737807}
+  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 1.0000001}
+  m_Children:
+  - {fileID: 8236433054435634284}
+  - {fileID: 8236433054435634258}
+  m_Father: {fileID: 8236433054435634276}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.41852114, y: -0.0075713363, z: -1.4154378}
+--- !u!1 &8236433054435668042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634282}
+  m_Layer: 0
+  m_Name: flamingo_Neck6_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668042}
+  m_LocalRotation: {x: 0.0000012189946, y: 0.00000028364514, z: -0.019173171, w: 0.9998162}
+  m_LocalPosition: {x: -0.068014756, y: -0.000000076293944, z: 7.2759575e-14}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634272}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.42214686, y: -0.019406132, z: -2.8200026}
+--- !u!1 &8236433054435668044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634284}
+  m_Layer: 0
+  m_Name: flamingo_Neck8_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668044}
+  m_LocalRotation: {x: 0.0000014562384, y: 0.00000038672587, z: 0.04968168, w: 0.9987651}
+  m_LocalPosition: {x: -0.05820114, y: 0.000000038146972, z: 0.000000007975759}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+  m_Children:
+  - {fileID: 8236433054435634256}
+  - {fileID: 8236433054435634262}
+  m_Father: {fileID: 8236433054435634280}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00016655256, y: 0.00004490165, z: 5.102235}
+--- !u!1 &8236433054435668046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634286}
+  m_Layer: 0
+  m_Name: flamingo_Neck7_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668046}
+  m_LocalRotation: {x: 0.000002021574, y: 0.00000028084736, z: -0.006890641, w: 0.9999763}
+  m_LocalPosition: {x: -0.07776153, y: 0, z: 0.00000015258782}
+  m_LocalScale: {x: 0.9999997, y: 0.9999996, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634276}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.41851294, y: -0.007570783, z: -1.4154508}
+--- !u!1 &8236433054435668048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634288}
+  m_Layer: 0
+  m_Name: flamingo_Neck12_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668048}
+  m_LocalRotation: {x: 0.0000011447239, y: -0.0000017782829, z: 0.10235162, w: 0.9947483}
+  m_LocalPosition: {x: -0.031453397, y: -0.00000015258789, z: 0.00000015258789}
+  m_LocalScale: {x: 0.99999976, y: 0.9999999, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634190}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.33234915, y: 0.035971507, z: 12.021241}
+--- !u!1 &8236433054435668050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634290}
+  m_Layer: 0
+  m_Name: flamingo_Neck12_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668050}
+  m_LocalRotation: {x: 0.000001173608, y: -0.0000017678188, z: 0.10235166, w: 0.9947483}
+  m_LocalPosition: {x: -0.031453397, y: 0.000000076293944, z: 0.00000001725275}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 8236433054435634236}
+  - {fileID: 8236433054435634210}
+  m_Father: {fileID: 8236433054435634190}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.33234507, y: 0.03595813, z: 12.021263}
+--- !u!1 &8236433054435668052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634292}
+  m_Layer: 0
+  m_Name: flamingo_Neck2_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668052}
+  m_LocalRotation: {x: 0.00000021066415, y: 0.000000006235558, z: -0.47348475, w: 0.88080204}
+  m_LocalPosition: {x: -0.05435213, y: 0, z: 0.00000007302656}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 0.99999976}
+  m_Children:
+  - {fileID: 8236433054435634296}
+  - {fileID: 8236433054435634302}
+  m_Father: {fileID: 8236433054435634294}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.000015201085, y: -0.000013940221, z: -57.11468}
+--- !u!1 &8236433054435668054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634294}
+  m_Layer: 0
+  m_Name: flamingo_Neck1_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668054}
+  m_LocalRotation: {x: 0.00000027383757, y: -0.000000067456604, z: -0.17477302, w: 0.98460877}
+  m_LocalPosition: {x: -0.1168327, y: 0.0000007629394, z: -0.0000000052247557}
+  m_LocalScale: {x: 0.9999995, y: 0.9999997, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634292}
+  - {fileID: 8236433054435634298}
+  m_Father: {fileID: 8236433054435634616}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.000029798317, y: -0.000013657922, z: -20.130896}
+--- !u!1 &8236433054435668056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634296}
+  m_Layer: 0
+  m_Name: flamingo_Neck3_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668056}
+  m_LocalRotation: {x: 0.00000016119701, y: 0.0000000024730231, z: -0.20808527, w: 0.9781107}
+  m_LocalPosition: {x: -0.048843917, y: 0.000000038146972, z: -0.000000017503389}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 0.99999994}
+  m_Children:
+  - {fileID: 8236433054435634300}
+  - {fileID: 8236433054435634274}
+  m_Father: {fileID: 8236433054435634292}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.028605938, y: -0.013320446, z: -24.62576}
+--- !u!1 &8236433054435668058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634298}
+  m_Layer: 0
+  m_Name: flamingo_Neck2_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668058}
+  m_LocalRotation: {x: 0.00000017576058, y: 0.000000037686693, z: -0.47348475, w: 0.88080204}
+  m_LocalPosition: {x: -0.05435213, y: -0.00000015258789, z: -9.094947e-15}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634294}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.000018640418, y: -0.0000045407583, z: -57.114674}
+--- !u!1 &8236433054435668060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634300}
+  m_Layer: 0
+  m_Name: flamingo_Neck4_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668060}
+  m_LocalRotation: {x: 0.00000007153723, y: 0.000000071012195, z: -0.1311642, w: 0.99136066}
+  m_LocalPosition: {x: -0.053684082, y: -0.000000104904174, z: -0.00000003784542}
+  m_LocalScale: {x: 1.0000004, y: 1.0000004, z: 1.0000001}
+  m_Children:
+  - {fileID: 8236433054435634272}
+  - {fileID: 8236433054435634278}
+  m_Father: {fileID: 8236433054435634296}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.030263662, y: -0.008627355, z: -15.679856}
+--- !u!1 &8236433054435668062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634302}
+  m_Layer: 0
+  m_Name: flamingo_Neck3_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668062}
+  m_LocalRotation: {x: 0.00000013971133, y: 0.00000006036524, z: -0.20808527, w: 0.9781107}
+  m_LocalPosition: {x: -0.048843537, y: -0.00000015258789, z: -0.00000007629392}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634292}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.028604507, y: -0.013312221, z: -24.62576}
+--- !u!1 &8236433054435668064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634176}
+  m_Layer: 0
+  m_Name: flamingo_Main_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668064}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634232}
+  - {fileID: 8236433054435634216}
+  - {fileID: 8236433054435634240}
+  m_Father: {fileID: 8236433054435634226}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -89.99999, y: 0, z: 0}
+--- !u!1 &8236433054435668066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634178}
+  m_Layer: 0
+  m_Name: flamingo_l_ToeTap_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668066}
+  m_LocalRotation: {x: 5.232793e-13, y: 5.0441166e-12, z: 0.16246521, w: 0.9867143}
+  m_LocalPosition: {x: 0.12588824, y: 0.009295282, z: 0.0000016260146}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634200}
+  m_Father: {fileID: 8236433054435634204}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -5.332784e-11, z: 0}
+--- !u!1 &8236433054435668068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634180}
+  m_Layer: 0
+  m_Name: flamingo_Mandible_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668068}
+  m_LocalRotation: {x: -0.000000010546291, y: 0.00000076697745, z: 0.064367816, w: 0.99792624}
+  m_LocalPosition: {x: -0.03273119, y: -0.018264923, z: -0.0000001525873}
+  m_LocalScale: {x: 0.9999995, y: 0.9999998, z: 1.0000006}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634236}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -0.000007925128, y: 0.00008684291, z: 7.3811088}
+--- !u!1 &8236433054435668070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634182}
+  m_Layer: 0
+  m_Name: flamingo_Mandible_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668070}
+  m_LocalRotation: {x: -0.00000003357007, y: 0.0000007333075, z: 0.06436783, w: 0.99792624}
+  m_LocalPosition: {x: -0.03273118, y: -0.018265076, z: -0.0000001525873}
+  m_LocalScale: {x: 1.0000007, y: 1.0000008, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634230}
+  - {fileID: 8236433054435634228}
+  m_Father: {fileID: 8236433054435634236}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.000007938591, y: 0.00008308636, z: 7.381108}
+--- !u!1 &8236433054435668072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634184}
+  m_Layer: 0
+  m_Name: flamingo_Neck10_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668072}
+  m_LocalRotation: {x: 0.000001327625, y: -0.0000008088206, z: 0.09720659, w: 0.99526423}
+  m_LocalPosition: {x: -0.04425766, y: 0.0000003814697, z: 0.00000015258789}
+  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634256}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.00015850826, y: -0.00007737495, z: 11.156676}
+--- !u!1 &8236433054435668074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634186}
+  m_Layer: 0
+  m_Name: flamingo_Neck10_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668074}
+  m_LocalRotation: {x: 0.0000013261755, y: -0.0000007939902, z: 0.0972066, w: 0.99526423}
+  m_LocalPosition: {x: -0.044257812, y: 0.00000047683716, z: 0.00000004511123}
+  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999994}
+  m_Children:
+  - {fileID: 8236433054435634190}
+  - {fileID: 8236433054435634188}
+  m_Father: {fileID: 8236433054435634256}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0001621926, y: -0.000079345125, z: 11.156676}
+--- !u!1 &8236433054435668076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634188}
+  m_Layer: 0
+  m_Name: flamingo_Neck11_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668076}
+  m_LocalRotation: {x: 0.0000014011404, y: -0.00000047641976, z: 0.15452029, w: 0.98798966}
+  m_LocalPosition: {x: -0.046624906, y: -0.00000020980835, z: 0.00000015258789}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634186}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.37746936, y: 0.08012656, z: 17.863684}
+--- !u!1 &8236433054435668078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634190}
+  m_Layer: 0
+  m_Name: flamingo_Neck11_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668078}
+  m_LocalRotation: {x: 0.0000014170116, y: -0.00000048147746, z: 0.15452027, w: 0.98798966}
+  m_LocalPosition: {x: -0.04662506, y: -0.000000038146972, z: 0.000000027415226}
+  m_LocalScale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+  m_Children:
+  - {fileID: 8236433054435634290}
+  - {fileID: 8236433054435634288}
+  m_Father: {fileID: 8236433054435634186}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.37747046, y: 0.0801176, z: 17.863693}
+--- !u!1 &8236433054435668080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634192}
+  m_Layer: 0
+  m_Name: flamingo_l_Knee_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668080}
+  m_LocalRotation: {x: 0.0000000016345433, y: 0.000000016579628, z: 0.3573021, w: 0.93398887}
+  m_LocalPosition: {x: -0.1497066, y: -0.000000038146972, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  m_Children:
+  - {fileID: 8236433054435634214}
+  m_Father: {fileID: 8236433054435634198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.00000013831755, y: -0.0000017546774, z: 71.45695}
+--- !u!1 &8236433054435668082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634194}
+  m_Layer: 0
+  m_Name: flamingo_l_HeelPeel_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668082}
+  m_LocalRotation: {x: -1.7053026e-13, y: 2.0676794e-12, z: 3.5260192e-25, w: 1}
+  m_LocalPosition: {x: 0.12588824, y: 0.009295282, z: 0.0000016260146}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634212}
+  - {fileID: 8236433054435634220}
+  m_Father: {fileID: 8236433054435634204}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -5.332784e-11, z: 0}
+--- !u!1 &8236433054435668084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634196}
+  m_Layer: 0
+  m_Name: flamingo_l_Toe-nub_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668084}
+  m_LocalRotation: {x: 0.000000019268668, y: -0.00000010214788, z: 0.00000002980232,
+    w: 1}
+  m_LocalPosition: {x: -0.092609994, y: -0.0000000023841857, z: -0.000000023841856}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00000247626, y: -0.000011272395, z: -6.7938337e-12}
+--- !u!1 &8236433054435668086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634198}
+  m_Layer: 0
+  m_Name: flamingo_l_Thigh_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668086}
+  m_LocalRotation: {x: -0.13679339, y: 0.07603634, z: -0.8567808, w: 0.4913579}
+  m_LocalPosition: {x: -0.011853122, y: 0.035610657, z: -0.07114387}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634192}
+  m_Father: {fileID: 8236433054435634268}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -3.959819, y: 17.570473, z: -127.89577}
+--- !u!1 &8236433054435668088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634200}
+  m_Layer: 0
+  m_Name: flamingo_l_toe_IKGoal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668088}
+  m_LocalRotation: {x: 0.5004626, y: 0.4995199, z: 0.5004626, w: -0.49955398}
+  m_LocalPosition: {x: -0.09258012, y: -0.0023502791, z: -0.000004582405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634178}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -89.899124, y: -89.996086, z: 0}
+--- !u!1 &8236433054435668090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634202}
+  m_Layer: 0
+  m_Name: flamingo_l_Toe_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668090}
+  m_LocalRotation: {x: -0.000015880387, y: -0.000017351851, z: -0.5379228, w: 0.8429941}
+  m_LocalPosition: {x: -0.40518668, y: 0.00000054359435, z: -0.000000014305114}
+  m_LocalScale: {x: 0.9999997, y: 0.99999964, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634196}
+  m_Father: {fileID: 8236433054435634214}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.000063817584, y: -0.000017205475, z: -83.78454}
+--- !u!1 &8236433054435668092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634204}
+  m_Layer: 0
+  m_Name: flamingo_l_ToeLift_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668092}
+  m_LocalRotation: {x: -1.7053026e-13, y: 2.0676794e-12, z: 3.5260192e-25, w: 1}
+  m_LocalPosition: {x: -0.18161054, y: 0.0001921618, z: -0.000004324913}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634194}
+  - {fileID: 8236433054435634178}
+  m_Father: {fileID: 8236433054435634222}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -5.332784e-11, z: 0}
+--- !u!1 &8236433054435668094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634206}
+  m_Layer: 0
+  m_Name: flamingo_l_toe_IKGoal 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668094}
+  m_LocalRotation: {x: 0.5066878, y: -0.4932225, z: 0.5066878, w: 0.49322054}
+  m_LocalPosition: {x: 0.0925794, y: 0.0023920368, z: -0.000000009536743}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634614}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 88.456924, y: 90.00415, z: -179.99574}
+--- !u!1 &8236433054435668352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634592}
+  m_Layer: 0
+  m_Name: flamingo_Tail_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668352}
+  m_LocalRotation: {x: -0.000000028244338, y: -0.000000055377267, z: -0.0776085, w: 0.99698395}
+  m_LocalPosition: {x: -0.07640829, y: 0, z: 6.300797e-10}
+  m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+  m_Children:
+  - {fileID: 8236433054435634594}
+  m_Father: {fileID: 8236433054435634268}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -0.0000043501936, y: -0.000007106026, z: -8.902229}
+--- !u!1 &8236433054435668354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634594}
+  m_Layer: 0
+  m_Name: flamingo_Tail-nub_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668354}
+  m_LocalRotation: {x: 0, y: -0, z: -0.00000010430813, w: 1}
+  m_LocalPosition: {x: -0.097853124, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634592}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.000011551065}
+--- !u!1 &8236433054435668358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634598}
+  m_Layer: 0
+  m_Name: flamingo_Tail_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668358}
+  m_LocalRotation: {x: 0.000000018637254, y: -0.000000029134238, z: -0.07760852, w: 0.9969839}
+  m_LocalPosition: {x: -0.07640829, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634268}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0.0000021873636, y: -0.0000040869427, z: -8.902232}
+--- !u!1 &8236433054435668368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634608}
+  m_Layer: 0
+  m_Name: flamingo_r_ToeLift_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668368}
+  m_LocalRotation: {x: -4.547474e-13, y: 2.1316282e-14, z: 9.6935236e-27, w: 1}
+  m_LocalPosition: {x: -0.1816119, y: 0.00019217013, z: -0.000008897781}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634250}
+  - {fileID: 8236433054435634614}
+  m_Father: {fileID: 8236433054435634246}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -5.332784e-11, z: 0}
+--- !u!1 &8236433054435668370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634610}
+  m_Layer: 0
+  m_Name: flamingo_r_Toe_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668370}
+  m_LocalRotation: {x: 0.00000024015768, y: 0.0000011676514, z: -0.74886537, w: 0.6627222}
+  m_LocalPosition: {x: 0.4051867, y: -0.0000002670288, z: 0.00000009059906}
+  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634252}
+  m_Father: {fileID: 8236433054435634242}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0003232713, y: 0.00006285282, z: -83.784485}
+--- !u!1 &8236433054435668372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634612}
+  m_Layer: 0
+  m_Name: flamingo_Spine1_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668372}
+  m_LocalRotation: {x: 0.00000012668818, y: -0.00000032788623, z: 0.99659336, w: -0.08247274}
+  m_LocalPosition: {x: 0.000000114440915, y: 0.00000015258789, z: 0.000000076293915}
+  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.9999999}
+  m_Children:
+  - {fileID: 8236433054435634618}
+  m_Father: {fileID: 8236433054435634268}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0.000036944075, y: 0.00001784716, z: -170.53856}
+--- !u!1 &8236433054435668374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634614}
+  m_Layer: 0
+  m_Name: flamingo_r_ToeTap_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668374}
+  m_LocalRotation: {x: -0.000025162995, y: -0.000003821728, z: 0.9933468, w: 0.11516133}
+  m_LocalPosition: {x: 0.12588966, y: 0.009295468, z: 0.0000063323973}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634206}
+  m_Father: {fileID: 8236433054435634608}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.00010249271, y: -0.0029147512, z: 179.97418}
+--- !u!1 &8236433054435668376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634616}
+  m_Layer: 0
+  m_Name: flamingo_Spine3_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668376}
+  m_LocalRotation: {x: 0.000000025422823, y: -0.00000008570966, z: 0.14358686, w: 0.98963773}
+  m_LocalPosition: {x: -0.14259182, y: -0.000014724731, z: -3.6379787e-14}
+  m_LocalScale: {x: 1.0000004, y: 1.0000004, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634294}
+  - {fileID: 8236433054435634260}
+  m_Father: {fileID: 8236433054435634618}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000048150623, y: -0.000008577553, z: 16.51091}
+--- !u!1 &8236433054435668378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634618}
+  m_Layer: 0
+  m_Name: flamingo_Spine2_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668378}
+  m_LocalRotation: {x: 0.000000014265832, y: 0.000000017500545, z: 0.17555642, w: 0.98446935}
+  m_LocalPosition: {x: -0.10000431, y: 0.000000076293944, z: -0.000000011127267}
+  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634616}
+  m_Father: {fileID: 8236433054435634612}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000014100877, y: 0.0000025360646, z: 20.222078}
+--- !u!1 &8236433054435668380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634620}
+  m_Layer: 0
+  m_Name: flamingo_SpineEnd_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668380}
+  m_LocalRotation: {x: 0.0965469, y: 0.7004847, z: 0.09654719, w: 0.7004845}
+  m_LocalPosition: {x: 0.000000047716824, y: 0.8643736, z: -0.0018337249}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634226}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -0.00002405966, y: 90.00001, z: 15.695144}
+--- !u!1 &8236433054435668382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634622}
+  m_Layer: 0
+  m_Name: flamingo_SpineBase_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668382}
+  m_LocalRotation: {x: -0.12908985, y: 0.6952236, z: -0.12908947, w: 0.69522357}
+  m_LocalPosition: {x: 0.000000065901574, y: 0.8264582, z: -0.23774962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634226}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -0.000028847315, y: 90.00001, z: -21.037855}
+--- !u!1 &8236433054435668384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634240}
+  - component: {fileID: 8236433054434831376}
+  - component: {fileID: 8236433054433734352}
+  m_Layer: 0
+  m_Name: flamingo_r_Foot_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668384}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.071140125, y: 0.29568374, z: 0.4132524}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634246}
+  m_Father: {fileID: 8236433054435634176}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8236433054434831376
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668384}
+  m_Mesh: {fileID: 4300004, guid: be272830d190afb4397662bd6dbcbe45, type: 3}
+--- !u!23 &8236433054433734352
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668384}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a73da93fd0803c544a856f66cf707a93, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8236433054435668386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634242}
+  m_Layer: 0
+  m_Name: flamingo_r_Ankle_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668386}
+  m_LocalRotation: {x: 0.15236631, y: -0.03544052, z: -0.15467378, w: 0.9755022}
+  m_LocalPosition: {x: 0.31931233, y: -0.00000019073485, z: -0.00000012397766}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 8236433054435634610}
+  m_Father: {fileID: 8236433054435634248}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 16.77035, y: -6.6345267, z: -9.135094}
+--- !u!1 &8236433054435668388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634244}
+  m_Layer: 0
+  m_Name: flamingo_r_heel_IKGoal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668388}
+  m_LocalRotation: {x: 0.50668794, y: -0.4932224, z: 0.50668794, w: 0.49322042}
+  m_LocalPosition: {x: -0.033450622, y: -0.4038034, z: -0.00000058174135}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634250}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 88.456924, y: 90.00415, z: -179.99574}
+--- !u!1 &8236433054435668390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634246}
+  m_Layer: 0
+  m_Name: flamingo_r_Heel_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668390}
+  m_LocalRotation: {x: 0.5379198, y: 0.45895728, z: 0.5379426, w: 0.45893165}
+  m_LocalPosition: {x: -0, y: 0.022527026, z: -0.4132524}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634608}
+  m_Father: {fileID: 8236433054435634240}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0027687352, y: 89.99995, z: 90.060616}
+--- !u!1 &8236433054435668392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634248}
+  m_Layer: 0
+  m_Name: flamingo_r_Knee_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668392}
+  m_LocalRotation: {x: -0.000000047035957, y: -0.00000009280429, z: 0.6121844, w: 0.79071504}
+  m_LocalPosition: {x: 0.14970645, y: -0.000000038146972, z: -0.000000009536743}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634242}
+  m_Father: {fileID: 8236433054435634254}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.00000010776955, y: -0.00001240234, z: 71.45703}
+--- !u!1 &8236433054435668394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634250}
+  m_Layer: 0
+  m_Name: flamingo_r_HeelPeel_hlp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668394}
+  m_LocalRotation: {x: -0.000025435496, y: -0.0000009042317, z: 1, w: 0.0002253034}
+  m_LocalPosition: {x: 0.12588966, y: 0.009295468, z: 0.0000063323973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634218}
+  - {fileID: 8236433054435634244}
+  m_Father: {fileID: 8236433054435634608}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00010249271, y: -0.0029147512, z: 179.97418}
+--- !u!1 &8236433054435668396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634252}
+  m_Layer: 0
+  m_Name: flamingo_r_Toe-nub_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668396}
+  m_LocalRotation: {x: 1.8189892e-12, y: 1.5631937e-13, z: 0.0000000018626449, w: 1}
+  m_LocalPosition: {x: 0.0926103, y: 0.000000010728836, z: -0.0000000047683715}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634610}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -1.8263102e-12, y: 1.18730355e-11, z: 0}
+--- !u!1 &8236433054435668398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634254}
+  m_Layer: 0
+  m_Name: flamingo_r_Thigh_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668398}
+  m_LocalRotation: {x: -0.008047058, y: -0.15622662, z: 0.5474602, w: 0.8220802}
+  m_LocalPosition: {x: -0.011853084, y: 0.035610657, z: 0.07114006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634248}
+  m_Father: {fileID: 8236433054435634268}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 3.9611619, y: -17.57276, z: 52.032562}
+--- !u!1 &8236433054435668400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634256}
+  m_Layer: 0
+  m_Name: flamingo_Neck9_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668400}
+  m_LocalRotation: {x: 0.000001481885, y: 0.00000007920513, z: 0.080974214, w: 0.9967162}
+  m_LocalPosition: {x: -0.054064024, y: 0.000000038146972, z: 0.00000006266695}
+  m_LocalScale: {x: 1.0000004, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634186}
+  - {fileID: 8236433054435634184}
+  m_Father: {fileID: 8236433054435634284}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.03002119, y: 0.0034876764, z: 8.676773}
+--- !u!1 &8236433054435668402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634258}
+  m_Layer: 0
+  m_Name: flamingo_Neck8_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668402}
+  m_LocalRotation: {x: 0.0000014272126, y: 0.00000037036253, z: 0.049681675, w: 0.9987651}
+  m_LocalPosition: {x: -0.058200836, y: 0, z: 0.0000000762938}
+  m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634280}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.00015818786, y: 0.000048985214, z: 5.102233}
+--- !u!1 &8236433054435668404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634260}
+  m_Layer: 0
+  m_Name: flamingo_NeckBase_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668404}
+  m_LocalRotation: {x: 0.0000003221906, y: -0.000000026853696, z: -0.17477292, w: 0.98460877}
+  m_LocalPosition: {x: -0.11683273, y: 0.0000006866455, z: -0.000000076293944}
+  m_LocalScale: {x: 0.99999976, y: 0.99999976, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634616}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.000034436787, y: -0.000010984715, z: -20.130888}
+--- !u!1 &8236433054435668406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634262}
+  m_Layer: 0
+  m_Name: flamingo_Neck9_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668406}
+  m_LocalRotation: {x: 0.0000014237397, y: 0.000000058830846, z: 0.08097424, w: 0.9967162}
+  m_LocalPosition: {x: -0.054063644, y: 0, z: 0.00000015258803}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634284}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.030015707, y: 0.003494814, z: 8.676777}
+--- !u!1 &8236433054435668408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634264}
+  m_Layer: 0
+  m_Name: flamingo_Nostril_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668408}
+  m_LocalRotation: {x: 0.00000013353942, y: -0.000000006926228, z: 0.27173606, w: 0.9623718}
+  m_LocalPosition: {x: -0.120591514, y: 0, z: -0.0000000026804627}
+  m_LocalScale: {x: 1.0000005, y: 1.0000005, z: 0.99999994}
+  m_Children:
+  - {fileID: 8236433054435634266}
+  m_Father: {fileID: 8236433054435634236}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0.000007912122, y: 0.000009151205, z: 31.535192}
+--- !u!1 &8236433054435668410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634266}
+  m_Layer: 0
+  m_Name: flamingo_Nostril-nub_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668410}
+  m_LocalRotation: {x: 0.000000034614004, y: 2.6147973e-12, z: -9.050861e-20, w: 1}
+  m_LocalPosition: {x: -0.049476624, y: 0.000000076293944, z: 0.0000001525873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634264}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000044482167, y: -8.7667325e-11, z: -3.6233773e-11}
+--- !u!1 &8236433054435668412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634268}
+  m_Layer: 0
+  m_Name: flamingo_Pelvis_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668412}
+  m_LocalRotation: {x: 0.7070607, y: 0.008083199, z: 0.7070605, w: 0.008080563}
+  m_LocalPosition: {x: -0, y: 0.000000076293944, z: -0.000000057220458}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 8236433054435634198}
+  - {fileID: 8236433054435634254}
+  - {fileID: 8236433054435634612}
+  - {fileID: 8236433054435634592}
+  - {fileID: 8236433054435634598}
+  m_Father: {fileID: 8236433054435634232}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.00021342158, y: 90.00001, z: 178.69023}
+--- !u!1 &8236433054435668414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236433054435634270}
+  m_Layer: 0
+  m_Name: flamingo_Nostril_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236433054435634270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236433054435668414}
+  m_LocalRotation: {x: 0.00000014964742, y: 0.00000007309663, z: 0.27173603, w: 0.9623718}
+  m_LocalPosition: {x: -0.120591454, y: 0.00000015258789, z: -5.820766e-13}
+  m_LocalScale: {x: 0.9999996, y: 0.99999976, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 8236433054435634236}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0.00001407942, y: 0.000012372407, z: 31.535196}

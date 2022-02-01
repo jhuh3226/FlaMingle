@@ -69,7 +69,7 @@ public class ARTapToPlaceObject : MonoBehaviour {
     }
 
     void CheckFirstAnimation () {
-        if (m_Animator.GetCurrentAnimatorStateInfo (0).normalizedTime >= 1.0f) {
+        if (m_Animator.GetCurrentAnimatorStateInfo (0).normalizedTime >= 4.5f) {
             Debug.Log ("1st animation done");
             firstAnimationDone = true;
         }
