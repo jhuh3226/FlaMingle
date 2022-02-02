@@ -18,6 +18,6 @@ The current project also used ARfoundation remote(4.9.3) for easier testing, whi
 4) Flamingle! - Human(person B) and flamingo mingle.
 
 **Process**
-Please check out the following blog for process documentaion.
 
+Please check out the following blog for process documentaion.
 https://junghuh.notion.site/Process-282eab8a376a488f93c3dd481c2040e6
