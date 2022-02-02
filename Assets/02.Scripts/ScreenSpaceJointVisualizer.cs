@@ -122,12 +122,14 @@ namespace UnityEngine.XR.ARFoundation.Samples {
 
                         if (((tiltRightA * 100 > 15 && tiltRightA * 100 < 45) && (tiltRightB * 100 > -25 && tiltRightB * 100 < 0)) || ((tiltLeftA * 100 < -15 && tiltLeftA * 100 > -45) && (tiltLeftB * 100 < 25 && tiltLeftB * 100 > 0))) {
                             poseCounter++;
-                            if (poseCounter > 300) posing = true;;
                             // Debug.Log (poseCounter);
-                            if (poseCounter > 2500) {
-                                flamingoPose = true;
+                            if (poseCounter > 300) {
+                                posing = true;
+                                if (poseCounter > 2000) {
+                                    Debug.Log ("flamingo posture");
+                                    flamingoPose = true;
+                                }
                             }
-                            // Debug.Log ("flamingo posture");
                             // cvFlamingoCheck.SetActive (true);
                         } else {
                             flamingoPose = false;

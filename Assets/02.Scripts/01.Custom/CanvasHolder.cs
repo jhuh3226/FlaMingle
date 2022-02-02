@@ -14,6 +14,7 @@ public class CanvasHolder : MonoBehaviour {
     public GameObject HumanBodyTracker, ArCamera, ArSessionOrigin; // the flamingo here is spawned packs of flamingo
 
     public bool pointGuideInitiated, footGuideInitiated, poseGuideInitiated, flamingoCombackInitiated = false;
+    bool changePoseMessage = false;
 
     Animator m_Animator;
     public RuntimeAnimatorController FlamingoTest, FlamingoComeback;
@@ -31,6 +32,12 @@ public class CanvasHolder : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate () {
+
+        /* goes in step 04 to change the posing message */
+        if (changePoseMessage) {
+            ChangePoseGuideMessage ();
+        }
+
         /* 01. cv saying, point toward person */
 
         /* 02. get the position of the person's foot and enable the guide cv(world-view) and cv text(overlay) */
@@ -55,10 +62,12 @@ public class CanvasHolder : MonoBehaviour {
 
         /* 04. When the animation finishes, enable cv guiding people with to make flamingo posture (mingle and get part of it) */
         /* get the animation finish information from ARTapToPlaceObject */
+        //  && !poseGuideInitiated
         else if (ArSessionOrigin.GetComponent<ARTapToPlaceObject> ().firstAnimationDone && !poseGuideInitiated) {
             Debug.Log ("AnimationFinished");
             ControlPoseGuide ();
             poseGuideInitiated = !poseGuideInitiated;
+            // poseGuideInitiated = true;
         }
 
         /* 05. when assumed the right pose*/
@@ -70,9 +79,8 @@ public class CanvasHolder : MonoBehaviour {
 
         /* 06. When all flamingos come near, final message pops up*/
         else if (ArSessionOrigin.GetComponent<ARTapToPlaceObject> ().secondAnimationDone && flamingoCombackInitiated) {
-            Invoke ("ControlMessage", 1f);
+            Invoke ("ControlMessage", 1.5f);
         }
-
     }
 
     void ControlFootGuide () {
@@ -82,10 +90,15 @@ public class CanvasHolder : MonoBehaviour {
     }
 
     void ControlPoseGuide () {
+        changePoseMessage = true;
         cvFootGuide.enabled = false;
         cvFootText.enabled = false;
         cvPoseGuide.enabled = true;
+    }
+
+    void ChangePoseGuideMessage () {
         if (ArCamera.GetComponent<ScreenSpaceJointVisualizer> ().posing) {
+            Debug.Log ("person is posing");
             poseGuideText1.SetActive (false);
             poseGuideText2.SetActive (true);
         }
@@ -94,9 +107,9 @@ public class CanvasHolder : MonoBehaviour {
     void ControlMessage () {
         cvPoseGuide.enabled = false;
         cvMessage.enabled = true;
-        messageImg.transform.Rotate (Vector3.up * Time.deltaTime * 100);
-        messageText1.transform.Rotate (Vector3.up * Time.deltaTime * 100);
-        messageText2.transform.Rotate (Vector3.up * Time.deltaTime * 100);
+        messageImg.transform.Rotate (Vector3.up * Time.deltaTime * 50);
+        messageText1.transform.Rotate (Vector3.up * Time.deltaTime * 50);
+        messageText2.transform.Rotate (Vector3.up * Time.deltaTime * 50);
 
         textCounter++;
         if (textCounter == 200) {

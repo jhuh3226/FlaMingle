@@ -8,6 +8,7 @@ namespace UnityEngine.XR.ARFoundation.Samples {
     public class BoneController : MonoBehaviour {
         // added
         public float leftFootX, leftFootY, leftFootZ, rightFootX, rightFootY, rightFootZ, hipX, hipY, hipZ = 0;
+        public float headX, headY, headZ;
 
         // 3D joint skeleton
         enum JointIndices {
@@ -178,6 +179,15 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                 hipX = m_BoneMapping[1].position.x;
                 hipY = m_BoneMapping[1].position.y;
                 hipZ = m_BoneMapping[1].position.z;
+            }
+            // -----------------------------
+
+            // head
+            var bone51 = m_BoneMapping[58];
+            if (bone51 != null) {
+                headX = m_BoneMapping[58].position.x;
+                headY = m_BoneMapping[58].position.y;
+                headZ = m_BoneMapping[58].position.z;
             }
             // -----------------------------
         }

@@ -9,7 +9,8 @@ public class ARTapToPlaceObject : MonoBehaviour {
     public GameObject flamingoPack, eventSystem;
     // [SerializeField]
     private GameObject spawnedObject, singleFlamingo; // reference of the created object
-    private GameObject[] singleFlamingos; // reference to the child of created object
+    List<GameObject> singleFlamingos;
+    // private GameObject[] singleFlamingos; // reference to the child of created object
     int i = 0;
 
     /* Raycast control */
@@ -50,7 +51,8 @@ public class ARTapToPlaceObject : MonoBehaviour {
         return false;
     }
     void Start () {
-        singleFlamingos = new GameObject[transform.childCount];
+        // singleFlamingos = new GameObject[transform.childCount];
+        singleFlamingos = new List<GameObject> ();
     }
 
     void Update () {
@@ -63,6 +65,7 @@ public class ARTapToPlaceObject : MonoBehaviour {
         /* if flamingo posture dected play animPhase2 */
         /* if flamingo bumps into mingle trigger zone, play animPhase3 */
         if (eventSystem.GetComponent<CanvasHolder> ().flamingoCombackInitiated) {
+            Debug.Log("testing flamingo comeback");
             Invoke ("AnimPhase2", 2f);
             AnimPhase3 ();
         }
@@ -78,20 +81,32 @@ public class ARTapToPlaceObject : MonoBehaviour {
                 spawnedObject = Instantiate (flamingoPack, hitPose.position, hitPose.rotation);
 
                 foreach (Transform child in spawnedObject.transform) {
-                    singleFlamingos[i] = child.gameObject;
-                    i += 1;
+                    try {
+                        singleFlamingos.Add (child.gameObject);
+                        Debug.Log (singleFlamingos);
+                    } catch { }
                 }
+
+                // foreach (Transform child in spawnedObject.transform) {
+                //     try {
+                //         singleFlamingos[i] = child.gameObject;
+                //         Debug.Log (singleFlamingos[i]);
+                //         i += 1;
+                //     } catch { }
+                // }
+
+                // try {
+                //     for (int i = 0; i < 7; i++) {
+                //         singleFlamingos[i] = spawnedObject.transform.GetChild(i).gameObject;
+                //         Debug.Log (singleFlamingos[i]);
+                //     }
+                // } catch { }
+
                 // singleFlamingo = spawnedObject.transform.GetChild (0).gameObject; // get the firstchild objects of the flamingo packs
 
                 // if there are singleflaminogs, put each animator to list
                 if (singleFlamingos != null) {
-                    m_Animator = new List<Animator> (); // initiate new list, for animator only list is possible
-
-                    try {
-                        for (int i = 0; i < singleFlamingos.Length; i++) {
-                            m_Animator.Add (singleFlamingos[i].GetComponent<Animator> ());
-                        }
-                    } catch { }
+                    Invoke ("AddAnimatorToList", 1f);
                 }
 
             } else {
@@ -100,6 +115,17 @@ public class ARTapToPlaceObject : MonoBehaviour {
         }
     }
 
+    void AddAnimatorToList () {
+        m_Animator = new List<Animator> (); // initiate new list, for animator only list is possible
+
+        try {
+            for (int i = 0; i < singleFlamingos.Count; i++) {
+                // for (int i = 0; i < singleFlamingos.Length; i++) {
+                Debug.Log (singleFlamingos.Count);
+                m_Animator.Add (singleFlamingos[i].GetComponent<Animator> ());
+            }
+        } catch { }
+    }
     void AnimPhase0 () {
         if (m_Animator[0].GetCurrentAnimatorStateInfo (0).IsName ("turnright")) {
             // if (m_Animator[0].GetCurrentAnimatorStateInfo (0).normalizedTime >= 1f) {
@@ -159,7 +185,7 @@ public class ARTapToPlaceObject : MonoBehaviour {
         // }
 
         // for all the flamingos, enable collider to detect trigger event
-        for (int i = 0; i < singleFlamingos.Length; i++) {
+        for (int i = 0; i < singleFlamingos.Count; i++) {
             // singleFlamingos[i].GetComponent<FlamingoCollisionDetect>.enabled = true;
             // Debug.Log ("name each" + singleFlamingos[i]); // this returns 5
             // Debug.Log ("tag" + singleFlamingos[i].gameObject.tag);
@@ -169,11 +195,11 @@ public class ARTapToPlaceObject : MonoBehaviour {
         }
 
         // when the flamingo enters trigger zone, set mingle animation true
-        for (int i = 0; i < singleFlamingos.Length; i++) {
+        for (int i = 0; i < singleFlamingos.Count; i++) {
             // singleFlamingos[i].GetComponent<FlamingoCollisionDetect>.enabled = true;
             try {
                 if (singleFlamingos[i].GetComponent<FlamingoCollisionDetect> ().collided) {
-                    Debug.Log (singleFlamingos[i] + " collided");
+                    // Debug.Log (singleFlamingos[i] + " collided");
                     singleFlamingos[i].GetComponent<Animator> ().SetBool ("IsMingle", true);
 
                     secondAnimationDone = true; // send bool to canvas holder

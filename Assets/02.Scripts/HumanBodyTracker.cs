@@ -11,8 +11,9 @@ namespace UnityEngine.XR.ARFoundation.Samples {
         GameObject m_SkeletonPrefab;
 
         // added ---------------
-        public GameObject cvFoot, colliderSphere;
+        public GameObject cvFoot, colliderSphere, cvMessage;
         public bool foundPerson = false; // bool to send to CanvasHolder
+        public float overY = 0;
 
         // ---------------------
 
@@ -73,6 +74,12 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                 else cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
                 colliderSphere.transform.position = new Vector3 (boneController.hipX, boneController.hipY, boneController.hipZ); // hip position
 
+                // positioning cvMessage
+                var headX = boneController.headX;
+                var modifiedHeadY = boneController.headY + overY;
+                var headZ = boneController.headZ;
+                cvMessage.transform.position = new Vector3 (headX, modifiedHeadY, headZ);
+
                 // Debug.Log (boneController.leftFootX);
             }
 
@@ -85,6 +92,12 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                     if (boneController.rightFootY > boneController.leftFootY) cvFoot.transform.position = new Vector3 (footCenterX, boneController.leftFootY, boneController.leftFootZ);
                     else cvFoot.transform.position = new Vector3 (footCenterX, boneController.rightFootY, boneController.rightFootZ);
                     colliderSphere.transform.position = new Vector3 (boneController.hipX, boneController.hipY, boneController.hipZ); // hip position
+
+                    // positioning cvMessage
+                    var headX = boneController.headX;
+                    var modifiedHeadY = boneController.headY + overY;
+                    var headZ = boneController.headZ;
+                    cvMessage.transform.position = new Vector3 (headX, modifiedHeadY, headZ);
                 }
             }
 
