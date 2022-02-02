@@ -9,7 +9,8 @@ using UnityEngine.XR.ARSubsystems;
 
 public class CanvasHolder : MonoBehaviour {
     public Canvas cvPointPerson, cvFootGuide, cvFootText, cvPoseGuide, cvMessage;
-    public GameObject messageText1, messageText2;
+    public GameObject poseGuideText1, poseGuideText2;
+    public GameObject messageText1, messageText2, messageImg;
     public GameObject HumanBodyTracker, ArCamera, ArSessionOrigin; // the flamingo here is spawned packs of flamingo
 
     public bool pointGuideInitiated, footGuideInitiated, poseGuideInitiated, flamingoCombackInitiated = false;
@@ -69,7 +70,7 @@ public class CanvasHolder : MonoBehaviour {
 
         /* 06. When all flamingos come near, final message pops up*/
         else if (ArSessionOrigin.GetComponent<ARTapToPlaceObject> ().secondAnimationDone && flamingoCombackInitiated) {
-            ControlMessage ();
+            Invoke ("ControlMessage", 1f);
         }
 
     }
@@ -84,11 +85,18 @@ public class CanvasHolder : MonoBehaviour {
         cvFootGuide.enabled = false;
         cvFootText.enabled = false;
         cvPoseGuide.enabled = true;
+        if (ArCamera.GetComponent<ScreenSpaceJointVisualizer> ().posing) {
+            poseGuideText1.SetActive (false);
+            poseGuideText2.SetActive (true);
+        }
     }
 
     void ControlMessage () {
         cvPoseGuide.enabled = false;
         cvMessage.enabled = true;
+        messageImg.transform.Rotate (Vector3.up * Time.deltaTime * 100);
+        messageText1.transform.Rotate (Vector3.up * Time.deltaTime * 100);
+        messageText2.transform.Rotate (Vector3.up * Time.deltaTime * 100);
 
         textCounter++;
         if (textCounter == 200) {

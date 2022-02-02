@@ -10,8 +10,13 @@ namespace UnityEngine.XR.ARFoundation.Samples {
     public class ScreenSpaceJointVisualizer : MonoBehaviour {
         // added
         public GameObject UpRightSphere, RightSphere, RightFootSphere, cvFlamingoCheck;
-        float tiltA, tiltB, tiltC = 0;
-        public bool flamingoPose = false;       // bool passed to CanvasHolder
+        public GameObject UpLeftSphere, LeftSphere, LeftFootSphere; // 11, 12, 13
+
+        float tiltRightA, tiltRightB, tiltRightC = 0;
+        float tiltLeftA, tiltLeftB, tiltLeftC = 0;
+
+        int poseCounter = 0;
+        public bool flamingoPose, posing = false; // bool passed to CanvasHolder
 
         // 2D joint skeleton
         enum JointIndices {
@@ -102,18 +107,32 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                         UpRightSphere.transform.position = joints[8].position;
                         RightSphere.transform.position = joints[9].position;
                         RightFootSphere.transform.position = joints[10].position;
-                        tiltA = (joints[8].position.y - joints[9].position.y) / (joints[8].position.x - joints[9].position.x);
-                        tiltB = (joints[9].position.y - joints[10].position.y) / (joints[9].position.x - joints[10].position.x);
-                        tiltC = (joints[8].position.y - joints[10].position.y) / (joints[8].position.x - joints[10].position.x);
+                        tiltRightA = (joints[8].position.y - joints[9].position.y) / (joints[8].position.x - joints[9].position.x);
+                        tiltRightB = (joints[9].position.y - joints[10].position.y) / (joints[9].position.x - joints[10].position.x);
+                        tiltRightC = (joints[8].position.y - joints[10].position.y) / (joints[8].position.x - joints[10].position.x);
 
-                        if ((tiltA * 100 > 15 && tiltA * 100 < 45) && (tiltB * 100 > -25 && tiltB * 100 < 0)) {
-                            flamingoPose = true;
+                        UpLeftSphere.transform.position = joints[11].position;
+                        LeftSphere.transform.position = joints[12].position;
+                        LeftFootSphere.transform.position = joints[13].position;
+                        tiltLeftA = (joints[11].position.y - joints[12].position.y) / (joints[11].position.x - joints[12].position.x);
+                        tiltLeftB = (joints[12].position.y - joints[13].position.y) / (joints[12].position.x - joints[13].position.x);
+                        tiltLeftC = (joints[11].position.y - joints[13].position.y) / (joints[11].position.x - joints[13].position.x);
+
+                        // Debug.Log ("tiltLeftA: " + tiltLeftA * 100 + ", tiltLeftB: " + tiltLeftB * 100 + ", tiltLeftC: " + tiltLeftC * 100);
+
+                        if (((tiltRightA * 100 > 15 && tiltRightA * 100 < 45) && (tiltRightB * 100 > -25 && tiltRightB * 100 < 0)) || ((tiltLeftA * 100 < -15 && tiltLeftA * 100 > -45) && (tiltLeftB * 100 < 25 && tiltLeftB * 100 > 0))) {
+                            poseCounter++;
+                            if (poseCounter > 300) posing = true;;
+                            // Debug.Log (poseCounter);
+                            if (poseCounter > 2500) {
+                                flamingoPose = true;
+                            }
                             // Debug.Log ("flamingo posture");
-                            cvFlamingoCheck.SetActive (true);
+                            // cvFlamingoCheck.SetActive (true);
                         } else {
                             flamingoPose = false;
-                            cvFlamingoCheck.SetActive (false);
-                            // Debug.Log ("tiltA: " + tiltA * 100 + ", tiltB: " + tiltB * 100 + ", tiltC: " + tiltC * 100);
+                            // cvFlamingoCheck.SetActive (false);
+                            // Debug.Log ("tiltRightA: " + tiltRightA * 100 + ", tiltRightB: " + tiltRightB * 100 + ", tiltRightC: " + tiltRightC * 100);
                         }
 
                         if (!s_JointSet.Add (boneIndex))

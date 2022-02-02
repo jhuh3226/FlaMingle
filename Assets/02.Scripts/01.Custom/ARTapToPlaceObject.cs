@@ -4,31 +4,45 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-[RequireComponent (typeof (ARRaycastManager))]
+[RequireComponent (typeof (ARRaycastManager), typeof (AudioSource), typeof (ARPlaneManager))]
 public class ARTapToPlaceObject : MonoBehaviour {
     public GameObject flamingoPack, eventSystem;
     // [SerializeField]
     private GameObject spawnedObject, singleFlamingo; // reference of the created object
     private GameObject[] singleFlamingos; // reference to the child of created object
     int i = 0;
+
+    /* Raycast control */
     private ARRaycastManager _arRaycastManager;
     private Vector2 touchPosition; // position of touch
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit> (); // reference of raycast
 
-    // Animation controll
+    /* Animation control */
     List<Animator> m_Animator; // has to be list
     public RuntimeAnimatorController FlamingoComeback;
     public bool firstAnimationDone, secondAnimationDone = false;
 
+    /* Audio control */
+    AudioSource m_audio;
+    public AudioClip frightenedFlamingo, calmFlamingo;
+    bool played, calmPlayed = false;
+
     private void Awake () {
         _arRaycastManager = GetComponent<ARRaycastManager> ();
-        // m_Animator = new List<Animator> ();
+        m_ARPlaneManager = GetComponent<ARPlaneManager> (); // toggle plane visibility
     }
 
     bool TryGetTouchPosition (out Vector2 touchPosition) {
         if (Input.touchCount > 0) {
             touchPosition = Input.GetTouch (0).position;
+
+            // Block UI
+            bool isOverUI = touchPosition.IsPointOverUIObject ();
+
+            if (isOverUI) {
+                Debug.Log ("touch over UI");
+            }
             return true;
         }
 
@@ -40,6 +54,9 @@ public class ARTapToPlaceObject : MonoBehaviour {
     }
 
     void Update () {
+        /* if animator is detected play animPhase0 */
+        if (m_Animator != null) AnimPhase0 ();
+
         /* if animator is detected play animPhase1 */
         if (m_Animator != null) AnimPhase1 ();
 
@@ -54,6 +71,7 @@ public class ARTapToPlaceObject : MonoBehaviour {
         if (_arRaycastManager.Raycast (touchPosition, hits, TrackableType.PlaneWithinPolygon)) {
 
             var hitPose = hits[0].pose; // get hitpoint
+            TogglePlaneDetection ();
 
             // spawn object ready or not?
             if (spawnedObject == null) {
@@ -82,6 +100,20 @@ public class ARTapToPlaceObject : MonoBehaviour {
         }
     }
 
+    void AnimPhase0 () {
+        if (m_Animator[0].GetCurrentAnimatorStateInfo (0).IsName ("turnright")) {
+            // if (m_Animator[0].GetCurrentAnimatorStateInfo (0).normalizedTime >= 1f) {
+            Debug.Log ("Flamingo Started running");
+            m_audio = spawnedObject.GetComponent<AudioSource> ();
+            if (!played) {
+                m_audio.clip = frightenedFlamingo;
+                m_audio.Play ();
+                played = true;
+            }
+        }
+
+    }
+
     /* when the animation starts and go over 4 seconds, stop flamingos running by controlling animation */
     void AnimPhase1 () {
         if (m_Animator[0].GetCurrentAnimatorStateInfo (0).normalizedTime >= 4f) {
@@ -99,6 +131,14 @@ public class ARTapToPlaceObject : MonoBehaviour {
 
     /* when the person poses flamingo posture, make flamingos to comeback */
     void AnimPhase2 () {
+        m_audio = spawnedObject.GetComponent<AudioSource> ();
+        m_audio.clip = calmFlamingo;
+        if (!calmPlayed) {
+            Debug.Log ("change audio to calm");
+            m_audio.Play ();
+            calmPlayed = true;
+        }
+
         // enable flamingos comback
         try {
             foreach (Animator anim in m_Animator) {
@@ -135,15 +175,38 @@ public class ARTapToPlaceObject : MonoBehaviour {
                 if (singleFlamingos[i].GetComponent<FlamingoCollisionDetect> ().collided) {
                     Debug.Log (singleFlamingos[i] + " collided");
                     singleFlamingos[i].GetComponent<Animator> ().SetBool ("IsMingle", true);
+
+                    secondAnimationDone = true; // send bool to canvas holder
                 } else { Debug.Log (singleFlamingos[i] + " didn't collided"); }
             } catch { }
         }
-
-        secondAnimationDone = true; // send bool to canvas holder
     }
 
     // void  NotInUse() {
     //     // foreach (GameObject single in singleFlamingos) single.GetComponent<Animator> ().runtimeAnimatorController = FlamingoComeback as RuntimeAnimatorController;
     //     Debug.Log ("Flamingos going near the person");
     // }
+
+    /* Toggles plane detection and the visualization of the planes. */
+    void TogglePlaneDetection () {
+        m_ARPlaneManager.enabled = !m_ARPlaneManager.enabled;
+
+        if (m_ARPlaneManager.enabled) {
+            SetAllPlanesActive (true);
+        } else {
+            SetAllPlanesActive (false);
+        }
+    }
+
+    /// <summary>
+    /// Iterates over all the existing planes and activates
+    /// or deactivates their <c>GameObject</c>s'.
+    /// </summary>
+    /// <param name="value">Each planes' GameObject is SetActive with this value.</param>
+    void SetAllPlanesActive (bool value) {
+        foreach (var plane in m_ARPlaneManager.trackables)
+            plane.gameObject.SetActive (value);
+    }
+
+    ARPlaneManager m_ARPlaneManager;
 }
