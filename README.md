@@ -13,8 +13,6 @@ The project is based on ARfoundation samples(https://github.com/Unity-Technologi
 ARFoundation: 4.2.2/ ARCore XR Plugin:4.2.2/ ARKit XR Plugin: 4.2.2/ ARKit Face Tracking: 4.2.2
 The current project also used ARfoundation remote(4.9.3) for easier testing, which is not uploaded to GitHub.
 
-**Effect Video**
-
 
 **User Flow**
 1) Person A situates person B inside the camera frame 
