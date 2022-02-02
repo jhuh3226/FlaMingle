@@ -9,12 +9,15 @@ using UnityEngine.XR.ARSubsystems;
 
 public class CanvasHolder : MonoBehaviour {
     public Canvas cvPointPerson, cvFootGuide, cvFootText, cvPoseGuide, cvMessage;
+    public GameObject messageText1, messageText2;
     public GameObject HumanBodyTracker, ArCamera, ArSessionOrigin; // the flamingo here is spawned packs of flamingo
 
     public bool pointGuideInitiated, footGuideInitiated, poseGuideInitiated, flamingoCombackInitiated = false;
 
     Animator m_Animator;
     public RuntimeAnimatorController FlamingoTest, FlamingoComeback;
+
+    int textCounter = 0;
 
     // Start is called before the first frame update
     void Start () {
@@ -86,6 +89,20 @@ public class CanvasHolder : MonoBehaviour {
     void ControlMessage () {
         cvPoseGuide.enabled = false;
         cvMessage.enabled = true;
+
+        textCounter++;
+        if (textCounter == 200) {
+            textCounter = 0;
+        }
+
+        // jump between two sentences
+        if (textCounter < 100) {
+            messageText1.SetActive (true);
+            messageText2.SetActive (false);
+        } else if (textCounter >= 100 & textCounter <= 200) {
+            messageText1.SetActive (false);
+            messageText2.SetActive (true);
+        }
     }
 
     void FindFlamingo () {

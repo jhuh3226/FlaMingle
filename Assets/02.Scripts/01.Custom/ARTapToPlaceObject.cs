@@ -40,16 +40,20 @@ public class ARTapToPlaceObject : MonoBehaviour {
     }
 
     void Update () {
-        if (m_Animator != null) CheckFirstAnimation (); // animation passing to canvas holder
+        /* if animator is detected play animPhase1 */
+        if (m_Animator != null) AnimPhase1 ();
+
+        /* if flamingo posture dected play animPhase2 */
+        /* if flamingo bumps into mingle trigger zone, play animPhase3 */
         if (eventSystem.GetComponent<CanvasHolder> ().flamingoCombackInitiated) {
-            Invoke ("CheckSecondAnimation", 2f);
-            AnimateFlamingoComeback ();
+            Invoke ("AnimPhase2", 2f);
+            AnimPhase3 ();
         }
 
         if (!TryGetTouchPosition (out Vector2 touchPosition)) return;
         if (_arRaycastManager.Raycast (touchPosition, hits, TrackableType.PlaneWithinPolygon)) {
-            // get hitpoint
-            var hitPose = hits[0].pose;
+
+            var hitPose = hits[0].pose; // get hitpoint
 
             // spawn object ready or not?
             if (spawnedObject == null) {
@@ -57,20 +61,19 @@ public class ARTapToPlaceObject : MonoBehaviour {
 
                 foreach (Transform child in spawnedObject.transform) {
                     singleFlamingos[i] = child.gameObject;
-                    Debug.Log (singleFlamingos[i]);
                     i += 1;
                 }
                 // singleFlamingo = spawnedObject.transform.GetChild (0).gameObject; // get the firstchild objects of the flamingo packs
 
                 // if there are singleflaminogs, put each animator to list
                 if (singleFlamingos != null) {
-                    m_Animator = new List<Animator> (); // initiate new list
+                    m_Animator = new List<Animator> (); // initiate new list, for animator only list is possible
 
-                    for (int i = 0; i < singleFlamingos.Length; i++) {
-                        Debug.Log (singleFlamingos.Length);
-                        m_Animator.Add (singleFlamingos[i].GetComponent<Animator> ());
-                        Debug.Log ("anim: " + m_Animator[i]);
-                    }
+                    try {
+                        for (int i = 0; i < singleFlamingos.Length; i++) {
+                            m_Animator.Add (singleFlamingos[i].GetComponent<Animator> ());
+                        }
+                    } catch { }
                 }
 
             } else {
@@ -79,31 +82,68 @@ public class ARTapToPlaceObject : MonoBehaviour {
         }
     }
 
-    void CheckFirstAnimation () {
+    /* when the animation starts and go over 4 seconds, stop flamingos running by controlling animation */
+    void AnimPhase1 () {
         if (m_Animator[0].GetCurrentAnimatorStateInfo (0).normalizedTime >= 4f) {
-            Debug.Log ("1st animation done");
+            // Debug.Log ("1st animation done");
             firstAnimationDone = true; // pass the bool to canvasHolder
 
-            // stop all flamingos running
+            // stop all running flamingos
+            try {
+                foreach (Animator anim in m_Animator) {
+                    anim.SetBool ("IsStopRunning", true);
+                }
+            } catch { }
+        }
+    }
+
+    /* when the person poses flamingo posture, make flamingos to comeback */
+    void AnimPhase2 () {
+        // enable flamingos comback
+        try {
             foreach (Animator anim in m_Animator) {
-                anim.SetBool ("IsStopRunning", true);
+                anim.SetBool ("IsComeback", true);
             }
-        }
+        } catch { }
     }
 
-    void CheckSecondAnimation () {
-        if (m_Animator[0].GetCurrentAnimatorStateInfo (0).normalizedTime >= 1.0f) {
-            Debug.Log ("2nd animation done");
-            secondAnimationDone = true;
+    /* If flamingo gets near the person(collides with the circle collider), make flamingos mingle */
+    void AnimPhase3 () {
+        // foreach (GameObject single in singleFlamingos) {
+        //     if (single.GetComponent<FlamingoCollisionDetect> ().collided) {
+        //         Debug.Log ("collided");
+        //         foreach (Animator anim in m_Animator) {
+        //             anim.SetBool ("IsMingle", true);
+        //         }
+        //     }
+        // }
+
+        // for all the flamingos, enable collider to detect trigger event
+        for (int i = 0; i < singleFlamingos.Length; i++) {
+            // singleFlamingos[i].GetComponent<FlamingoCollisionDetect>.enabled = true;
+            // Debug.Log ("name each" + singleFlamingos[i]); // this returns 5
+            // Debug.Log ("tag" + singleFlamingos[i].gameObject.tag);
+            try {
+                (singleFlamingos[i].GetComponent (typeof (CapsuleCollider)) as Collider).enabled = true;
+            } catch { }
         }
+
+        // when the flamingo enters trigger zone, set mingle animation true
+        for (int i = 0; i < singleFlamingos.Length; i++) {
+            // singleFlamingos[i].GetComponent<FlamingoCollisionDetect>.enabled = true;
+            try {
+                if (singleFlamingos[i].GetComponent<FlamingoCollisionDetect> ().collided) {
+                    Debug.Log (singleFlamingos[i] + " collided");
+                    singleFlamingos[i].GetComponent<Animator> ().SetBool ("IsMingle", true);
+                } else { Debug.Log (singleFlamingos[i] + " didn't collided"); }
+            } catch { }
+        }
+
+        secondAnimationDone = true; // send bool to canvas holder
     }
 
-    // For comeback action it can go either 1) comback to where the cube is
-    // or 2) comback near wear the person is
-    // for the 1st case, stop make them running and sit or do other motion when it collides with collider around human
-    // for the 2nd case, animation + postion movement should be considered well
-    void AnimateFlamingoComeback () {
-        // foreach (GameObject single in singleFlamingos) single.GetComponent<Animator> ().runtimeAnimatorController = FlamingoComeback as RuntimeAnimatorController;
-        Debug.Log ("Flamingos going near the person");
-    }
+    // void  NotInUse() {
+    //     // foreach (GameObject single in singleFlamingos) single.GetComponent<Animator> ().runtimeAnimatorController = FlamingoComeback as RuntimeAnimatorController;
+    //     Debug.Log ("Flamingos going near the person");
+    // }
 }

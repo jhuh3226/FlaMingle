@@ -57,9 +57,6 @@ namespace UnityEngine.XR.ARFoundation.Samples {
                 if (!m_SkeletonTracker.TryGetValue (humanBody.trackableId, out boneController)) {
                     Debug.Log ($"Adding a new skeleton [{humanBody.trackableId}].");
 
-                    Debug.Log ("Also instantiate flamingo");
-                    // Instantiate (flamingPrefab, humanBody.transform);
-
                     var newSkeletonGO = Instantiate (m_SkeletonPrefab, humanBody.transform);
                     boneController = newSkeletonGO.GetComponent<BoneController> ();
                     m_SkeletonTracker.Add (humanBody.trackableId, boneController);
