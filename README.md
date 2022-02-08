@@ -1,4 +1,4 @@
-# FlaMingle
+# Dolphin Captivity
 
 The project is TikTok's creative assignment, creating novel filters.
 
